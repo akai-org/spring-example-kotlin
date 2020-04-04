@@ -15,16 +15,16 @@ data class User
 (
         @Id
         @Column(name = "id", columnDefinition = "int")
-        var id: Int,
+        val id: Int,
         @Column(name = "login", columnDefinition = "varchar(45)")
-        var login: String,
+        val login: String,
         @Column(name = "email", columnDefinition = "varchar(45)")
-        var email: String,
+        val email: String,
         @JsonIgnore
         @Column(name = "password", columnDefinition = "varchar(45)")
-        var psw: String,
+        val psw: String,
         @Column(name = "role", columnDefinition = "varchar(45)")
-        var role: String
+        val role: String
 ) : UserDetails {
 
     override fun getUsername(): String = email

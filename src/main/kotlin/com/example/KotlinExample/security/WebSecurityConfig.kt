@@ -80,7 +80,6 @@ class WebSecurityConfig : WebSecurityConfigurerAdapter() {
             }
 
             override fun matches(rawPassword: CharSequence?, encodedPassword: String?): Boolean {
-                System.err.println("Encoded: " + encodedPassword)
                 return encodedPassword?.contentEquals(rawPassword ?: "") ?: false
             }
 
